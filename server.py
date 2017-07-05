@@ -8,8 +8,7 @@ def index():
 
 @app.route('/users/<username>')
 def show_user_profile(username):
-    print username
-    return render_template('success.html')
+    return render_template('user.html', username = username)
 
 @app.route('/users', methods=['POST'])
 def create_user():
